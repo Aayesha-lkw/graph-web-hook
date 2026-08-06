@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["sh", "-c", "exec gunicorn --bind :$PORT app:app"]
+CMD ["sh", "-c", "exec gunicorn --bind :8080 app:app"]
