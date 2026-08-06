@@ -3,6 +3,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+print("LOADED MY FLASK APP")
 
 @app.route("/", methods=["GET"])
 def health():
