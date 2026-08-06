@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "--bind", ":8080", "--access-logfile", "-", "app:app"]
+CMD ["python", "app.py"]
