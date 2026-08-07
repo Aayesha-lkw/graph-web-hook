@@ -29,18 +29,19 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest \
+            -t europe-west1-docker.pkg.dev/wgs-artifact-prod-tools/ml-platform/webhookgraphimgnew2:latest \
             .
 
       - name: Push Docker image to Artifact Registry
         run: |
           docker push \
-            europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest
+            europe-west1-docker.pkg.dev/wgs-artifact-prod-tools/ml-platform/webhookgraphimgnew2:latest
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy webhookgraph \
-            --image europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest \
+            --image europe-west1-docker.pkg.dev/wgs-artifact-prod-tools/ml-platform/webhookgraphimgnew2:latest \
+            --project wgs-mlops-sandbox \
             --region europe-west1 \
             --platform managed \
             --quiet
