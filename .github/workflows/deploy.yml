@@ -32,3 +32,6 @@ jobs:
       - name: Push Docker image to Artifact Registry
         run: |
           docker push europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest
+
+      options:
+        logging: CLOUD_LOGGING_ONLY
