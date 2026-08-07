@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '-t',
+      'europe-west1-docker.pkg.dev/wgs-mlops-sandbox/chatbot-repo/gcp-chatbot',
+      '.'
+    ]
+
+images:
+  - 'europe-west1-docker.pkg.dev/wgs-mlops-sandbox/chatbot-repo/gcp-chatbot'
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
