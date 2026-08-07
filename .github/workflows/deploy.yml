@@ -27,8 +27,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t europe-west4-docker.pkg.dev/wgs-aayesha-sandbox/webhookregistry/webhookgraphimgnew2:latest .
+          docker build -t europe-west4-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest .
 
       - name: Push Docker image to Artifact Registry
         run: |
-          docker push europe-west4-docker.pkg.dev/wgs-aayesha-sandbox/webhookregistry/webhookgraphimgnew2:latest
+          docker push europe-west4-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest
