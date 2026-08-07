@@ -23,12 +23,12 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker europe-west4-docker.pkg.dev
+        run: gcloud auth configure-docker europe-west1-docker.pkg.dev
 
       - name: Build Docker image
         run: |
-          docker build -t europe-west4-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest .
+          docker build -t europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest .
 
       - name: Push Docker image to Artifact Registry
         run: |
-          docker push europe-west4-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest
+          docker push europe-west1-docker.pkg.dev/wgs-mlops-sandbox/webhookregistry/webhookgraphimgnew2:latest
